@@ -1,1 +1,7 @@
-testing chat gpt with langchain
+streamlit
+langchain
+numpy
+pandas
+random
+time
+
