@@ -8,7 +8,7 @@ from langchain.llms import OpenAI
 st.title("Chat GPT Fun")
 
 # Retrieve Open AI key
-open_api_key = st.secrets("OPEN_API_KEY")  # st.sidebar.text_input('OpenAI API Key', type='password')
+open_api_key = st.secrets.get("OPEN_API_KEY")  # st.sidebar.text_input('OpenAI API Key', type='password')
 
 def generate_response(input_text):
    llm = OpenAI(temperature=0.7, openai_api_key=open_api_key)
