@@ -11,7 +11,7 @@ st.title("Chat GPT Fun")
 open_api_key = st.sidebar.text_input('OpenAI API Key', type='password')
 
 def generate_response(input_text):
-   llm = OpenAI(temperature=0.7)
+   llm = OpenAI(temperature=0.7, openai_api_key=open_api_key)
    st.info(llm(input_text))
 
 with st.form('my_form'):
