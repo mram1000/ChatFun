@@ -8,7 +8,7 @@ from langchain.llms import OpenAI
 st.title("Chat GPT Fun")
 
 # Retrieve Open AI key
-open_api_key = st.sidebar.text_input('OpenAI API Key', type='password')
+open_api_key = st.secrets("OPEN_API_KEY")  # st.sidebar.text_input('OpenAI API Key', type='password')
 
 def generate_response(input_text):
    llm = OpenAI(temperature=0.7, openai_api_key=open_api_key)
@@ -16,10 +16,10 @@ def generate_response(input_text):
 
 with st.form('my_form'):
    text = st.text_area('Enter text:', 'Write a 1 stanza poem about the beauty of rain')
-   submitted = st.form_submit_button('Submit')
-   if not open_api_key.startswith('sk-'):
-      st.warning('Please enter your OpenAI API Key!')
-   if submitted and open_api_key.startswith('sk-'):
+   if submitted := st.form_submit_button('Submit'):
+   # if not open_api_key.startswith('sk-'):
+   #    st.warning('Please enter your OpenAI API Key!')
+   # if submitted and open_api_key.startswith('sk-'):
       generate_response(text) 
   
 
