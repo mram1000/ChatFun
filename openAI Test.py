@@ -21,7 +21,7 @@ with st.form('my_form'):
    if not open_api_key.startswith('sk-'):
       st.warning('Please enter your OpenAI API Key!')
    if submitted and open_api_key.startswith('sk-'):
-      generate_response(text)
+      generate_response(text) 
   
 
 # set default model in session state
