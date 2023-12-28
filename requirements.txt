@@ -2,6 +2,5 @@ streamlit
 langchain
 numpy
 pandas
-random
-time
+
 
