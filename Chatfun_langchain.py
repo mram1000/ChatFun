@@ -1,4 +1,4 @@
-from openai import OpenAI
+# from openai import OpenAI
 import streamlit as st 
 import pandas as pd 
 import numpy as np 
@@ -12,10 +12,14 @@ open_api_key = st.secrets.get("OPEN_API_KEY")  # st.sidebar.text_input('OpenAI A
 
 def generate_response(input_text):
    llm = OpenAI(temperature=0.7, openai_api_key=open_api_key)
-   st.info(llm(input_text))
+   output = llm(input_text)
+   st.info(output.replace(r"\n", "  "))
+   # with st.chat_message("assistant"):
+   #    st.write(output)
+   print(output)
 
 with st.form('my_form'):
-   text = st.text_area('Enter text:', 'Write a 1 stanza poem about the beauty of rain')
+   text = st.text_area('Enter text:', 'Write a 1 stanza poem about the insanity of ')
    if submitted := st.form_submit_button('Submit'):
    # if not open_api_key.startswith('sk-'):
    #    st.warning('Please enter your OpenAI API Key!')
