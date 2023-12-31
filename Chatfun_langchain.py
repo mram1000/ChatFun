@@ -5,7 +5,7 @@ import numpy as np
 from langchain.llms import OpenAI 
 
 
-st.title("Chat GPT Fun")
+st.title("Chat GPT Fun") 
 
 # Retrieve Open AI key
 open_api_key = st.secrets.get("OPEN_API_KEY")  # st.sidebar.text_input('OpenAI API Key', type='password')

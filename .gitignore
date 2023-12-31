@@ -1,2 +1,7 @@
 requirements.txt
+.streamlit/
 .streamlit/secrets.toml
+cache/cache_db.db.wal
+cache
+pandasai.log
+cache/cache_db.db
