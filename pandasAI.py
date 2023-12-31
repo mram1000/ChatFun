@@ -17,12 +17,12 @@ api_key  = st.secrets['OPENAI_API_KEY']
 
 st.title('Stock Price Chat')
 # ticker = st.text_input('Symbol', '^NDX')
-ticker = st.text_input('Enter Symbol', '^NDX')
+ticker = st.text_input('Enter Symbol', 'INTC')
 
 llm = OpenAI(api_token=api_key)
 dfdaily = yf.download(ticker, period="1mo", interval = "1d")
 
-df = SmartDataframe(dfdaily, config={"llm": llm, "conversational": False})
+df = SmartDataframe(dfdaily, config={"llm": llm, "conversational": True})
 
 with st.expander("See data"):
     st.dataframe(dfdaily)
@@ -33,7 +33,7 @@ def generate_response(input_text):
         response = df.chat(input_text)
 
     st.info(response)
-    print(response)
+    # print(response)
 
 with st.form('my_form'):
    text = st.text_area('Ask your question:', 'What was the price on 2023-12-12?')
