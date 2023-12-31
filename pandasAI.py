@@ -12,14 +12,14 @@ from pandasai.llm import  OpenAI
 from pandasai import SmartDataframe
 from pandasai.helpers.openai_info import get_openai_callback
 import yfinance as yf
-openai.api_key  = st.secrets['OPENAI_API_KEY']
+api_key  = st.secrets['OPENAI_API_KEY']
 
 
 st.title('Stock Price Chat')
 # ticker = st.text_input('Symbol', '^NDX')
 ticker = st.text_input('Enter Symbol', '^NDX')
 
-llm = OpenAI(api_token=openai.api_key)
+llm = OpenAI(api_token=api_key)
 dfdaily = yf.download(ticker, period="1mo", interval = "1d")
 
 df = SmartDataframe(dfdaily, config={"llm": llm, "conversational": False})
