@@ -7,7 +7,7 @@
 
 import streamlit as st 
 import pandas as pd 
-import numpy as np 
+import numpy as np  
 from pandasai.llm import  OpenAI
 from pandasai import SmartDataframe
 from pandasai.helpers.openai_info import get_openai_callback
