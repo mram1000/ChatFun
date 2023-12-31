@@ -12,7 +12,7 @@ from pandasai.llm import  OpenAI
 from pandasai import SmartDataframe
 from pandasai.helpers.openai_info import get_openai_callback
 import yfinance as yf
-api_key  = st.secrets['OPENAI_API_KEY']
+api_key  = st.secrets['OPENAI_API_KEY'] 
 
 
 st.title('Stock Price Chat')
