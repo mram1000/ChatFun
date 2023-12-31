@@ -3,5 +3,9 @@ langchain
 numpy
 pandas
 openai
+os
+dotenv
+pandasai
+yfinance
 
 
