@@ -13,7 +13,7 @@ open_api_key = st.secrets.get("OPEN_API_KEY")  # st.sidebar.text_input('OpenAI A
 def generate_response(input_text):
    llm = OpenAI(temperature=0.7, openai_api_key=open_api_key)
    output = llm(input_text)
-   st.write(output.replace(r"\n", r"  \n"))
+   st.write(output.replace(r"\n", r"  "))
    # with st.chat_message("assistant"):
    #    st.write(output)
    print(output)

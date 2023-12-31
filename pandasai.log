@@ -169,3 +169,593 @@ result = {'type': 'string', 'value': f'The price on {date} was {price}.'}
 2023-12-30 19:50:18 [INFO] Answer: {'type': 'string', 'value': 'The price on 2023-12-12 was 44.040000915527344.'}
 2023-12-30 19:50:18 [INFO] Executed in: 0.03945040702819824s
 2023-12-30 19:50:18 [INFO] Executing Step 6: ResultParsing
+2023-12-30 20:22:21 [INFO] Question: What was the price on 2023-12-12?
+2023-12-30 20:22:21 [INFO] Running PandasAI with openai LLM...
+2023-12-30 20:22:21 [INFO] Prompt ID: 7995636c-077a-4dac-a9ea-83b85d748572
+2023-12-30 20:22:21 [INFO] Executing Step 0: CacheLookup
+2023-12-30 20:22:21 [INFO] Using cached response
+2023-12-30 20:22:21 [INFO] Executing Step 1: PromptGeneration
+2023-12-30 20:22:21 [INFO] Executing Step 2: CodeGenerator
+2023-12-30 20:22:21 [INFO] Executing Step 3: CachePopulation
+2023-12-30 20:22:21 [INFO] Executing Step 4: CodeExecution
+2023-12-30 20:22:21 [INFO] Saving charts to C:\Users\mram\OneDrive - Intel Corporation\Python\OpenAI\ChatFun\exports\charts\temp_chart.png
+2023-12-30 20:22:21 [INFO] 
+Code running:
+```
+date = '2023-12-12'
+price = dfs[0][dfs[0].index == date]['Close'].values[0]
+result = {'type': 'string', 'value': f'The price on {date} was {price}.'}
+        ```
+2023-12-30 20:22:21 [INFO] Executing Step 5: ResultValidation
+2023-12-30 20:22:21 [INFO] Answer: {'type': 'string', 'value': 'The price on 2023-12-12 was 44.040000915527344.'}
+2023-12-30 20:22:21 [INFO] Executed in: 0.03308510780334473s
+2023-12-30 20:22:21 [INFO] Executing Step 6: ResultParsing
+2023-12-30 20:47:01 [INFO] Question: What was the price on 2023-12-12?
+2023-12-30 20:47:01 [INFO] Running PandasAI with openai LLM...
+2023-12-30 20:47:01 [INFO] Prompt ID: 23a64e9f-f04e-4f25-aef8-dfbc90ea190a
+2023-12-30 20:47:01 [INFO] Executing Step 0: CacheLookup
+2023-12-30 20:47:01 [INFO] Using cached response
+2023-12-30 20:47:01 [INFO] Executing Step 1: PromptGeneration
+2023-12-30 20:47:01 [INFO] Executing Step 2: CodeGenerator
+2023-12-30 20:47:01 [INFO] Executing Step 3: CachePopulation
+2023-12-30 20:47:01 [INFO] Executing Step 4: CodeExecution
+2023-12-30 20:47:01 [INFO] Saving charts to C:\Users\mram\OneDrive - Intel Corporation\Python\OpenAI\ChatFun\exports\charts\temp_chart.png
+2023-12-30 20:47:01 [INFO] 
+Code running:
+```
+date = '2023-12-12'
+price = dfs[0][dfs[0].index == date]['Close'].values[0]
+result = {'type': 'string', 'value': f'The price on {date} was {price}.'}
+        ```
+2023-12-30 20:47:01 [INFO] Executing Step 5: ResultValidation
+2023-12-30 20:47:01 [INFO] Answer: {'type': 'string', 'value': 'The price on 2023-12-12 was 44.040000915527344.'}
+2023-12-30 20:47:01 [INFO] Executed in: 0.02854776382446289s
+2023-12-30 20:47:01 [INFO] Executing Step 6: ResultParsing
+2023-12-30 20:47:11 [INFO] Question: What was the highest price
+2023-12-30 20:47:11 [INFO] Running PandasAI with openai LLM...
+2023-12-30 20:47:11 [INFO] Prompt ID: 719ff120-e040-4972-b8f1-6a491b21cb03
+2023-12-30 20:47:11 [INFO] Executing Step 0: CacheLookup
+2023-12-30 20:47:11 [INFO] Executing Step 1: PromptGeneration
+2023-12-30 20:47:11 [INFO] Using prompt: <dataframe>
+dfs[0]:21x6
+Open,High,Low,Close,Adj Close,Volume
+44.36000061035156,44.36000061035156,42.86000061035156,6007172760,6587657278,43922500
+44.650001525878906,45.09000015258789,44.40999984741211,6795007264,2939182796,46263000
+43.29999923706055,43.310001373291016,41.689998626708984,6113214189,3562148987,50417600
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+```
+
+Q: What was the highest price
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+
+Generate python code and return full updated code:
+2023-12-30 20:47:11 [INFO] Executing Step 2: CodeGenerator
+2023-12-30 20:47:11 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2023-12-30 20:47:11 [ERROR] Pipeline failed on step 2: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-mZHzJ***************************************UfHB. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2023-12-31 03:00:02 [ERROR] 
+1 Failed download:
+2023-12-31 03:00:02 [ERROR] ['INTC']: Exception('%ticker%: No price data found, symbol may be delisted (period=1mo)')
+2023-12-31 10:15:31 [INFO] Question: What was the price on 2023-12-20?
+2023-12-31 10:15:31 [INFO] Running PandasAI with openai LLM...
+2023-12-31 10:15:31 [INFO] Prompt ID: 0edada51-70f5-4853-b74e-95fa9cd97d66
+2023-12-31 10:15:31 [INFO] Executing Step 0: CacheLookup
+2023-12-31 10:15:31 [INFO] Executing Step 1: PromptGeneration
+2023-12-31 10:15:31 [INFO] Using prompt: <dataframe>
+dfs[0]:21x6
+Open,High,Low,Close,Adj Close,Volume
+43.29999923706055,43.310001373291016,41.689998626708984,42.349998474121094,42.349998474121094,50417600
+44.36000061035156,44.36000061035156,42.86000061035156,43.7400016784668,43.7400016784668,43922500
+44.650001525878906,45.09000015258789,44.40999984741211,44.70000076293945,44.70000076293945,46263000
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+```
+
+Q: What was the price on 2023-12-20?
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+
+Generate python code and return full updated code:
+2023-12-31 10:15:31 [INFO] Executing Step 2: CodeGenerator
+2023-12-31 10:15:31 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2023-12-31 10:15:31 [ERROR] Pipeline failed on step 2: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-mZHzJ***************************************UfHB. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2023-12-31 10:18:01 [INFO] Question: What was the price on 2023-12-12?
+2023-12-31 10:18:01 [INFO] Running PandasAI with openai LLM...
+2023-12-31 10:18:01 [INFO] Prompt ID: e5032802-2ba1-4dec-8acb-5314b7a5117b
+2023-12-31 10:18:01 [INFO] Executing Step 0: CacheLookup
+2023-12-31 10:18:01 [INFO] Using cached response
+2023-12-31 10:18:01 [INFO] Executing Step 1: PromptGeneration
+2023-12-31 10:18:01 [INFO] Executing Step 2: CodeGenerator
+2023-12-31 10:18:01 [INFO] Executing Step 3: CachePopulation
+2023-12-31 10:18:01 [INFO] Executing Step 4: CodeExecution
+2023-12-31 10:18:01 [INFO] Saving charts to C:\Users\mram\OneDrive - Intel Corporation\Python\OpenAI\ChatFun\exports\charts\temp_chart.png
+2023-12-31 10:18:01 [INFO] 
+Code running:
+```
+date = '2023-12-12'
+price = dfs[0][dfs[0].index == date]['Close'].values[0]
+result = {'type': 'string', 'value': f'The price on {date} was {price}.'}
+        ```
+2023-12-31 10:18:01 [INFO] Executing Step 5: ResultValidation
+2023-12-31 10:18:01 [INFO] Answer: {'type': 'string', 'value': 'The price on 2023-12-12 was 16354.25.'}
+2023-12-31 10:18:01 [INFO] Executed in: 0.05878138542175293s
+2023-12-31 10:18:01 [INFO] Executing Step 6: ResultParsing
+2023-12-31 10:18:19 [INFO] Question: What was the price on 2023-12-20?
+2023-12-31 10:18:19 [INFO] Running PandasAI with openai LLM...
+2023-12-31 10:18:19 [INFO] Prompt ID: 98c7737b-773b-4aa9-ae0b-7349a2936637
+2023-12-31 10:18:19 [INFO] Executing Step 0: CacheLookup
+2023-12-31 10:18:19 [INFO] Executing Step 1: PromptGeneration
+2023-12-31 10:18:19 [INFO] Using prompt: <dataframe>
+dfs[0]:21x6
+Open,High,Low,Close,Adj Close,Volume
+44.650001525878906,45.09000015258789,44.40999984741211,44.70000076293945,44.70000076293945,46263000
+44.36000061035156,44.36000061035156,42.86000061035156,43.7400016784668,43.7400016784668,43922500
+43.29999923706055,43.310001373291016,41.689998626708984,42.349998474121094,42.349998474121094,50417600
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+```
+
+Q: What was the price on 2023-12-20?
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+
+Generate python code and return full updated code:
+2023-12-31 10:18:19 [INFO] Executing Step 2: CodeGenerator
+2023-12-31 10:18:22 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-12-31 10:18:22 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+price = dfs[0].loc['2023-12-20', 'Close']
+
+# Declare result var
+result = {
+    "type": "number",
+    "value": price
+}
+            ```
+            
+2023-12-31 10:18:22 [INFO] Executing Step 3: CachePopulation
+2023-12-31 10:18:22 [INFO] Executing Step 4: CodeExecution
+2023-12-31 10:18:22 [INFO] Saving charts to C:\Users\mram\OneDrive - Intel Corporation\Python\OpenAI\ChatFun\exports\charts\temp_chart.png
+2023-12-31 10:18:22 [INFO] 
+Code running:
+```
+price = dfs[0].loc['2023-12-20', 'Close']
+result = {'type': 'number', 'value': price}
+        ```
+2023-12-31 10:18:22 [INFO] Executing Step 5: ResultValidation
+2023-12-31 10:18:22 [INFO] Answer: {'type': 'number', 'value': 45.7599983215332}
+2023-12-31 10:18:22 [INFO] Executed in: 2.6710383892059326s
+2023-12-31 10:18:22 [INFO] Executing Step 6: ResultParsing
+2023-12-31 10:39:11 [INFO] Question: What was the price on 2023-12-20?
+2023-12-31 10:39:11 [INFO] Running PandasAI with openai LLM...
+2023-12-31 10:39:11 [INFO] Prompt ID: b5c1d393-cfa3-43e7-a126-9dd0117cb6ae
+2023-12-31 10:39:11 [INFO] Executing Step 0: CacheLookup
+2023-12-31 10:39:11 [INFO] Using cached response
+2023-12-31 10:39:11 [INFO] Executing Step 1: PromptGeneration
+2023-12-31 10:39:11 [INFO] Executing Step 2: CodeGenerator
+2023-12-31 10:39:11 [INFO] Executing Step 3: CachePopulation
+2023-12-31 10:39:11 [INFO] Executing Step 4: CodeExecution
+2023-12-31 10:39:11 [INFO] Saving charts to C:\Users\mram\OneDrive - Intel Corporation\Python\OpenAI\ChatFun\exports\charts\temp_chart.png
+2023-12-31 10:39:11 [INFO] 
+Code running:
+```
+price = dfs[0].loc['2023-12-20', 'Close']
+result = {'type': 'number', 'value': price}
+        ```
+2023-12-31 10:39:11 [INFO] Executing Step 5: ResultValidation
+2023-12-31 10:39:11 [INFO] Answer: {'type': 'number', 'value': 45.7599983215332}
+2023-12-31 10:39:11 [INFO] Executed in: 0.029668331146240234s
+2023-12-31 10:39:11 [INFO] Executing Step 6: ResultParsing
+2023-12-31 10:39:26 [INFO] Question: What was the price on 2023-12-12?
+2023-12-31 10:39:26 [INFO] Running PandasAI with openai LLM...
+2023-12-31 10:39:26 [INFO] Prompt ID: 8635c005-2b72-44aa-89f0-c473949e1860
+2023-12-31 10:39:26 [INFO] Executing Step 0: CacheLookup
+2023-12-31 10:39:26 [INFO] Using cached response
+2023-12-31 10:39:26 [INFO] Executing Step 1: PromptGeneration
+2023-12-31 10:39:26 [INFO] Executing Step 2: CodeGenerator
+2023-12-31 10:39:26 [INFO] Executing Step 3: CachePopulation
+2023-12-31 10:39:26 [INFO] Executing Step 4: CodeExecution
+2023-12-31 10:39:26 [INFO] Saving charts to C:\Users\mram\OneDrive - Intel Corporation\Python\OpenAI\ChatFun\exports\charts\temp_chart.png
+2023-12-31 10:39:26 [INFO] 
+Code running:
+```
+date = '2023-12-12'
+price = dfs[0][dfs[0].index == date]['Close'].values[0]
+result = {'type': 'string', 'value': f'The price on {date} was {price}.'}
+        ```
+2023-12-31 10:39:26 [INFO] Executing Step 5: ResultValidation
+2023-12-31 10:39:26 [INFO] Answer: {'type': 'string', 'value': 'The price on 2023-12-12 was 16354.25.'}
+2023-12-31 10:39:26 [INFO] Executed in: 0.03241920471191406s
+2023-12-31 10:39:26 [INFO] Executing Step 6: ResultParsing
+2023-12-31 10:39:37 [INFO] Question: What was the price on 2023-12-12?
+2023-12-31 10:39:37 [INFO] Running PandasAI with openai LLM...
+2023-12-31 10:39:37 [INFO] Prompt ID: 5b1f8d76-5905-4b66-a186-afa05005ba0f
+2023-12-31 10:39:37 [INFO] Executing Step 0: CacheLookup
+2023-12-31 10:39:37 [INFO] Using cached response
+2023-12-31 10:39:37 [INFO] Executing Step 1: PromptGeneration
+2023-12-31 10:39:37 [INFO] Executing Step 2: CodeGenerator
+2023-12-31 10:39:37 [INFO] Executing Step 3: CachePopulation
+2023-12-31 10:39:37 [INFO] Executing Step 4: CodeExecution
+2023-12-31 10:39:37 [INFO] Saving charts to C:\Users\mram\OneDrive - Intel Corporation\Python\OpenAI\ChatFun\exports\charts\temp_chart.png
+2023-12-31 10:39:37 [INFO] 
+Code running:
+```
+date = '2023-12-12'
+price = dfs[0][dfs[0].index == date]['Close'].values[0]
+result = {'type': 'string', 'value': f'The price on {date} was {price}.'}
+        ```
+2023-12-31 10:39:37 [INFO] Executing Step 5: ResultValidation
+2023-12-31 10:39:37 [INFO] Answer: {'type': 'string', 'value': 'The price on 2023-12-12 was 44.040000915527344.'}
+2023-12-31 10:39:37 [INFO] Executed in: 0.026778697967529297s
+2023-12-31 10:39:37 [INFO] Executing Step 6: ResultParsing
+2023-12-31 10:40:20 [INFO] Question: What was the value of shares traded on 2023-12-12?
+2023-12-31 10:40:20 [INFO] Running PandasAI with openai LLM...
+2023-12-31 10:40:20 [INFO] Prompt ID: 6d5e217c-d3a5-49dd-9448-c001e053531c
+2023-12-31 10:40:20 [INFO] Executing Step 0: CacheLookup
+2023-12-31 10:40:20 [INFO] Executing Step 1: PromptGeneration
+2023-12-31 10:40:20 [INFO] Using prompt: <dataframe>
+dfs[0]:21x6
+Open,High,Low,Close,Adj Close,Volume
+44.36000061035156,44.36000061035156,42.86000061035156,0449655285,5286597605,43922500
+43.29999923706055,43.310001373291016,41.689998626708984,7263663117,8857368614,50417600
+44.650001525878906,45.09000015258789,44.40999984741211,9938797414,2128671383,46263000
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+```
+
+Q: What was the value of shares traded on 2023-12-12?
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+
+Generate python code and return full updated code:
+2023-12-31 10:40:20 [INFO] Executing Step 2: CodeGenerator
+2023-12-31 10:40:23 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-12-31 10:40:23 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+value_traded = dfs[0].loc['2023-12-12', 'Volume'] * dfs[0].loc['2023-12-12', 'Close']
+
+# Declare result var
+result = {
+    "type": "number",
+    "value": value_traded
+}
+            ```
+            
+2023-12-31 10:40:23 [INFO] Executing Step 3: CachePopulation
+2023-12-31 10:40:23 [INFO] Executing Step 4: CodeExecution
+2023-12-31 10:40:23 [INFO] Saving charts to C:\Users\mram\OneDrive - Intel Corporation\Python\OpenAI\ChatFun\exports\charts\temp_chart.png
+2023-12-31 10:40:23 [INFO] 
+Code running:
+```
+value_traded = dfs[0].loc['2023-12-12', 'Volume'] * dfs[0].loc['2023-12-12', 'Close']
+result = {'type': 'number', 'value': value_traded}
+        ```
+2023-12-31 10:40:23 [INFO] Executing Step 5: ResultValidation
+2023-12-31 10:40:23 [INFO] Answer: {'type': 'number', 'value': 1385154916.7953491}
+2023-12-31 10:40:23 [INFO] Executed in: 3.484987497329712s
+2023-12-31 10:40:23 [INFO] Executing Step 6: ResultParsing
+2023-12-31 10:40:44 [INFO] Question: What was the value of shares traded on 2023-12-12? Explain the calculation steps.
+2023-12-31 10:40:44 [INFO] Running PandasAI with openai LLM...
+2023-12-31 10:40:44 [INFO] Prompt ID: 03568d40-d68c-4383-aef3-d5da9d15ca12
+2023-12-31 10:40:44 [INFO] Executing Step 0: CacheLookup
+2023-12-31 10:40:44 [INFO] Executing Step 1: PromptGeneration
+2023-12-31 10:40:44 [INFO] Using prompt: <dataframe>
+dfs[0]:21x6
+Open,High,Low,Close,Adj Close,Volume
+44.650001525878906,45.09000015258789,44.40999984741211,44.70000076293945,44.70000076293945,46263000
+43.29999923706055,43.310001373291016,41.689998626708984,42.349998474121094,42.349998474121094,50417600
+44.36000061035156,44.36000061035156,42.86000061035156,43.7400016784668,43.7400016784668,43922500
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+```
+
+Q: What was the value of shares traded on 2023-12-12? Explain the calculation steps.
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+
+Generate python code and return full updated code:
+2023-12-31 10:40:44 [INFO] Executing Step 2: CodeGenerator
+2023-12-31 10:40:54 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-12-31 10:40:54 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+df = dfs[0]  # Get the first dataframe from the list
+df['Date'] = pd.to_datetime(df['Date'])  # Convert the 'Date' column to datetime format
+df.set_index('Date', inplace=True)  # Set the 'Date' column as the index
+
+# Calculate the value of shares traded on 2023-12-12
+shares_traded = df.loc['2023-12-12', 'Volume']
+closing_price = df.loc['2023-12-12', 'Close']
+value_traded = shares_traded * closing_price
+
+# Declare result var
+result = {
+    "type": "number",
+    "value": value_traded
+}
+            ```
+            
+2023-12-31 10:40:54 [INFO] Executing Step 3: CachePopulation
+2023-12-31 10:40:54 [INFO] Executing Step 4: CodeExecution
+2023-12-31 10:40:54 [INFO] Saving charts to C:\Users\mram\OneDrive - Intel Corporation\Python\OpenAI\ChatFun\exports\charts\temp_chart.png
+2023-12-31 10:40:54 [INFO] 
+Code running:
+```
+df = dfs[0]
+df['Date'] = pd.to_datetime(df['Date'])
+df.set_index('Date', inplace=True)
+shares_traded = df.loc['2023-12-12', 'Volume']
+closing_price = df.loc['2023-12-12', 'Close']
+value_traded = shares_traded * closing_price
+result = {'type': 'number', 'value': value_traded}
+        ```
+2023-12-31 10:40:54 [WARNING] Failed to execute code with a correction framework [retry number: 1]
+2023-12-31 10:40:54 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexes\base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 165, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5745, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5753, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Date'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandasai\pipelines\smart_datalake_chat\code_execution.py", line 46, in execute
+    result = pipeline_context.query_exec_tracker.execute_func(
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandasai\helpers\query_exec_tracker.py", line 128, in execute_func
+    result = function(*args, **kwargs)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandasai\helpers\code_manager.py", line 207, in execute_code
+    exec(code_to_run, environment)
+  File "<string>", line 2, in <module>
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\frame.py", line 3807, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexes\base.py", line 3804, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Date'
+. Retrying
+2023-12-31 10:40:54 [INFO] Using prompt: <dataframe>
+dfs[0]:21x6
+Open,High,Low,Close,Adj Close,Volume
+44.650001525878906,45.09000015258789,44.40999984741211,44.70000076293945,44.70000076293945,46263000
+43.29999923706055,43.310001373291016,41.689998626708984,42.349998474121094,42.349998474121094,50417600
+44.36000061035156,44.36000061035156,42.86000061035156,43.7400016784668,43.7400016784668,43922500
+</dataframe>
+
+The user asked the following question:
+Q: What was the value of shares traded on 2023-12-12? Explain the calculation steps.
+
+You generated this python code:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+df = dfs[0]  # Get the first dataframe from the list
+df['Date'] = pd.to_datetime(df['Date'])  # Convert the 'Date' column to datetime format
+df.set_index('Date', inplace=True)  # Set the 'Date' column as the index
+
+# Calculate the value of shares traded on 2023-12-12
+shares_traded = df.loc['2023-12-12', 'Volume']
+closing_price = df.loc['2023-12-12', 'Close']
+value_traded = shares_traded * closing_price
+
+# Declare result var
+result = {
+    "type": "number",
+    "value": value_traded
+}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexes\base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 165, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5745, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5753, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Date'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandasai\pipelines\smart_datalake_chat\code_execution.py", line 46, in execute
+    result = pipeline_context.query_exec_tracker.execute_func(
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandasai\helpers\query_exec_tracker.py", line 128, in execute_func
+    result = function(*args, **kwargs)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandasai\helpers\code_manager.py", line 207, in execute_code
+    exec(code_to_run, environment)
+  File "<string>", line 2, in <module>
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\frame.py", line 3807, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexes\base.py", line 3804, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Date'
+
+
+Fix the python code above and return the new python code:
+2023-12-31 10:41:00 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-12-31 10:41:00 [INFO] Saving charts to C:\Users\mram\OneDrive - Intel Corporation\Python\OpenAI\ChatFun\exports\charts\temp_chart.png
+2023-12-31 10:41:00 [INFO] 
+Code running:
+```
+df = dfs[0]
+df['Date'] = pd.to_datetime(df.index)
+df.set_index('Date', inplace=True)
+shares_traded = df.loc['2023-12-12', 'Volume']
+closing_price = df.loc['2023-12-12', 'Close']
+value_traded = shares_traded * closing_price
+result = {'type': 'number', 'value': value_traded}
+result
+        ```
+2023-12-31 10:41:00 [INFO] Executing Step 5: ResultValidation
+2023-12-31 10:41:00 [INFO] Answer: {'type': 'number', 'value': 1385154916.7953491}
+2023-12-31 10:41:00 [INFO] Executed in: 15.658395051956177s
+2023-12-31 10:41:00 [INFO] Executing Step 6: ResultParsing
+2023-12-31 10:53:52 [INFO] Question: What was the price on 2023-12-12?
+2023-12-31 10:53:52 [INFO] Running PandasAI with openai LLM...
+2023-12-31 10:53:52 [INFO] Prompt ID: cd9b71a5-eae4-4c94-a46d-235b1a0f7459
+2023-12-31 10:53:52 [INFO] Executing Step 0: CacheLookup
+2023-12-31 10:53:52 [INFO] Using cached response
+2023-12-31 10:53:52 [INFO] Executing Step 1: PromptGeneration
+2023-12-31 10:53:52 [INFO] Executing Step 2: CodeGenerator
+2023-12-31 10:53:52 [INFO] Executing Step 3: CachePopulation
+2023-12-31 10:53:52 [INFO] Executing Step 4: CodeExecution
+2023-12-31 10:53:52 [INFO] Saving charts to C:\Users\mram\OneDrive - Intel Corporation\Python\OpenAI\ChatFun\exports\charts\temp_chart.png
+2023-12-31 10:53:52 [INFO] 
+Code running:
+```
+date = '2023-12-12'
+price = dfs[0][dfs[0].index == date]['Close'].values[0]
+result = {'type': 'string', 'value': f'The price on {date} was {price}.'}
+        ```
+2023-12-31 10:53:52 [INFO] Executing Step 5: ResultValidation
+2023-12-31 10:53:52 [INFO] Answer: {'type': 'string', 'value': 'The price on 2023-12-12 was 44.040000915527344.'}
+2023-12-31 10:53:52 [INFO] Executed in: 0.040197134017944336s
+2023-12-31 10:53:52 [INFO] Executing Step 6: ResultParsing
+2023-12-31 10:54:01 [INFO] Question: What was the volume on 2023-12-12?
+2023-12-31 10:54:01 [INFO] Running PandasAI with openai LLM...
+2023-12-31 10:54:01 [INFO] Prompt ID: e7faed67-c2f5-486b-a19e-1aa908fe25d2
+2023-12-31 10:54:01 [INFO] Executing Step 0: CacheLookup
+2023-12-31 10:54:01 [INFO] Executing Step 1: PromptGeneration
+2023-12-31 10:54:01 [INFO] Using prompt: <dataframe>
+dfs[0]:21x6
+Open,High,Low,Close,Adj Close,Volume
+43.29999923706055,43.310001373291016,41.689998626708984,42.349998474121094,42.349998474121094,50417600
+44.650001525878906,45.09000015258789,44.40999984741211,44.70000076293945,44.70000076293945,46263000
+44.36000061035156,44.36000061035156,42.86000061035156,43.7400016784668,43.7400016784668,43922500
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+```
+
+Q: What was the volume on 2023-12-12?
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+
+Generate python code and return full updated code:
+2023-12-31 10:54:01 [INFO] Executing Step 2: CodeGenerator
+2023-12-31 10:54:03 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-12-31 10:54:03 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+volume = dfs[0].loc['2023-12-12', 'Volume']
+
+# Declare result var
+result = {
+    "type": "number",
+    "value": volume
+}
+            ```
+            
+2023-12-31 10:54:03 [INFO] Executing Step 3: CachePopulation
+2023-12-31 10:54:03 [INFO] Executing Step 4: CodeExecution
+2023-12-31 10:54:03 [INFO] Saving charts to C:\Users\mram\OneDrive - Intel Corporation\Python\OpenAI\ChatFun\exports\charts\temp_chart.png
+2023-12-31 10:54:03 [INFO] 
+Code running:
+```
+volume = dfs[0].loc['2023-12-12', 'Volume']
+result = {'type': 'number', 'value': volume}
+        ```
+2023-12-31 10:54:03 [INFO] Executing Step 5: ResultValidation
+2023-12-31 10:54:03 [INFO] Answer: {'type': 'number', 'value': 31452200.0}
+2023-12-31 10:54:03 [INFO] Executed in: 2.4836432933807373s
+2023-12-31 10:54:03 [INFO] Executing Step 6: ResultParsing
