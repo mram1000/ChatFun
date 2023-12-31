@@ -1,10 +1,10 @@
-import os
-import openai
-import sys
-sys.path.append('../..')
-from dotenv import load_dotenv, find_dotenv
-_ = load_dotenv(find_dotenv()) # read local .env file
-openai.api_key  = os.environ['OPENAI_API_KEY']
+# import os
+# import openai
+# import sys
+# sys.path.append('../..')
+# from dotenv import load_dotenv, find_dotenv
+# _ = load_dotenv(find_dotenv()) # read local .env file
+
 import streamlit as st 
 import pandas as pd 
 import numpy as np 
@@ -12,6 +12,8 @@ from pandasai.llm import  OpenAI
 from pandasai import SmartDataframe
 from pandasai.helpers.openai_info import get_openai_callback
 import yfinance as yf
+openai.api_key  = st.secrets['OPENAI_API_KEY']
+
 
 st.title('Stock Price Chat')
 # ticker = st.text_input('Symbol', '^NDX')
