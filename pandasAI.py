@@ -15,7 +15,7 @@ import yfinance as yf
 api_key  = st.secrets['OPENAI_API_KEY'] 
 
 
-st.title('Stock Price Chat')
+st.title('Chat with a Stock')
 # ticker = st.text_input('Symbol', '^NDX')
 ticker = st.text_input('Enter Symbol', 'INTC')
 
@@ -42,3 +42,5 @@ with st.form('my_form'):
    #    st.warning('Please enter your OpenAI API Key!')
    # if submitted and open_api_key.startswith('sk-'):
       generate_response(text) 
+
+st.caption("Copyright @ Madhu Ram 2023")
