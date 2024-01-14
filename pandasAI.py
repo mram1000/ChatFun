@@ -24,8 +24,12 @@ dfdaily = yf.download(ticker, period="1mo", interval = "1d")
 
 df = SmartDataframe(dfdaily, config={"llm": llm, "conversational": True})
 
+def generate_chart(input_table):
+    st.line_chart(input_table['Adj Close'])
+
 with st.expander("See data"):
     st.dataframe(dfdaily)
+    generate_chart(dfdaily)
 
 def generate_response(input_text):
 #    llm = OpenAI(temperature=0.7, openai_api_key=open_api_key)
@@ -35,12 +39,17 @@ def generate_response(input_text):
     st.info(response)
     # print(response)
 
+# def get_logo(input_symbol):
+
+
 with st.form('my_form'):
-   text = st.text_area('Ask your question:', 'What was the price on 2023-12-12?')
+   text = st.text_area('Ask your question:', 'What was the price on 2024-01-01?')
    if submitted := st.form_submit_button('Submit'):
    # if not open_api_key.startswith('sk-'):
    #    st.warning('Please enter your OpenAI API Key!')
    # if submitted and open_api_key.startswith('sk-'):
       generate_response(text) 
+
+
 
 st.caption("Copyright @ Madhu Ram 2023")

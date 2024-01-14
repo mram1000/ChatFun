@@ -13,10 +13,13 @@ open_api_key = st.secrets.get("OPEN_API_KEY")  # st.sidebar.text_input('OpenAI A
 def generate_response(input_text):
    llm = OpenAI(temperature=0.7, openai_api_key=open_api_key)
    output = llm(input_text)
-   st.write(output.replace(r"\n", r"  "))
+   # st.write(output.replace(r"\n", r"  \n"))
+   lines = output.split('\n')
+   
+   for i in lines:
    # with st.chat_message("assistant"):
-   #    st.write(output)
-   print(output)
+      st.write(i)
+      # print(i)
 
 with st.form('my_form'):
    text = st.text_area('Enter text:', 'Write a 1 stanza poem about the beauty of pain')
