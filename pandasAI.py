@@ -16,6 +16,14 @@ api_key  = st.secrets['OPENAI_API_KEY']
 
 
 st.title('Chat with a Stock')
+
+fileNm = st.file_uploader('Upload your own data: ')
+if fileNm:
+    uploaded_df = pd.read_csv(fileNm)
+    st.dataframe(uploaded_df)
+
+fileNm2 = st.file_uploader('Upload some of your own data: ')
+
 # ticker = st.text_input('Symbol', '^NDX')
 ticker = st.text_input('Enter Symbol', 'INTC')
 

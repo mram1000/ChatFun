@@ -2298,3 +2298,435 @@ result = {'type': 'number', 'value': price}
 2024-01-13 17:57:27 [INFO] Answer: {'type': 'number', 'value': 47.79999923706055}
 2024-01-13 17:57:27 [INFO] Executed in: 2.598794937133789s
 2024-01-13 17:57:27 [INFO] Executing Step 6: ResultParsing
+2024-01-14 15:28:11 [ERROR] 
+1 Failed download:
+2024-01-14 15:28:11 [ERROR] ['INTC']: Exception('%ticker%: No price data found, symbol may be delisted (period=1mo)')
+2024-01-15 12:54:10 [ERROR] 
+1 Failed download:
+2024-01-15 12:54:10 [ERROR] 
+1 Failed download:
+2024-01-15 12:54:10 [ERROR] ['INTC']: Exception('%ticker%: No price data found, symbol may be delisted (period=1mo)')
+2024-01-15 12:54:10 [ERROR] ['INTC']: Exception('%ticker%: No price data found, symbol may be delisted (period=1mo)')
+2024-01-16 12:00:29 [ERROR] 
+1 Failed download:
+2024-01-16 12:00:29 [ERROR] ['INTC']: Exception('%ticker%: No price data found, symbol may be delisted (period=1mo)')
+2024-03-02 13:54:54 [INFO] Question: What was the price on 2024-01-01?
+2024-03-02 13:54:54 [INFO] Running PandasAI with openai LLM...
+2024-03-02 13:54:54 [INFO] Prompt ID: 5ff38e4e-1839-48f4-9fa1-2d532b0e277f
+2024-03-02 13:54:54 [INFO] Executing Step 0: CacheLookup
+2024-03-02 13:54:54 [INFO] Using cached response
+2024-03-02 13:54:54 [INFO] Executing Step 1: PromptGeneration
+2024-03-02 13:54:54 [INFO] Executing Step 2: CodeGenerator
+2024-03-02 13:54:54 [INFO] Executing Step 3: CachePopulation
+2024-03-02 13:54:54 [INFO] Executing Step 4: CodeExecution
+2024-03-02 13:54:54 [INFO] Saving charts to C:\Users\mram\OneDrive - Intel Corporation\Python\OpenAI\ChatFun\exports\charts\temp_chart.png
+2024-03-02 13:54:54 [INFO] 
+Code running:
+```
+price = dfs[0].loc['2024-01-01', 'Close']
+result = {'type': 'number', 'value': price}
+        ```
+2024-03-02 13:54:54 [WARNING] Failed to execute code with a correction framework [retry number: 1]
+2024-03-02 13:54:54 [ERROR] Failed with error: Traceback (most recent call last):
+  File "pandas\_libs\index.pyx", line 548, in pandas._libs.index.DatetimeEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 2263, in pandas._libs.hashtable.Int64HashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 2273, in pandas._libs.hashtable.Int64HashTable.get_item
+KeyError: 1704067200000000000
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexes\base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 516, in pandas._libs.index.DatetimeEngine.get_loc
+  File "pandas\_libs\index.pyx", line 550, in pandas._libs.index.DatetimeEngine.get_loc
+KeyError: Timestamp('2024-01-01 00:00:00')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexes\datetimes.py", line 736, in get_loc
+    return Index.get_loc(self, key, method, tolerance)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexes\base.py", line 3804, in get_loc
+    raise KeyError(key) from err
+KeyError: Timestamp('2024-01-01 00:00:00')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandasai\pipelines\smart_datalake_chat\code_execution.py", line 46, in execute
+    result = pipeline_context.query_exec_tracker.execute_func(
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandasai\helpers\query_exec_tracker.py", line 128, in execute_func
+    result = function(*args, **kwargs)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandasai\helpers\code_manager.py", line 207, in execute_code
+    exec(code_to_run, environment)
+  File "<string>", line 1, in <module>
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexing.py", line 1067, in __getitem__
+    return self._getitem_tuple(key)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexing.py", line 1247, in _getitem_tuple
+    return self._getitem_lowerdim(tup)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexing.py", line 967, in _getitem_lowerdim
+    section = self._getitem_axis(key, axis=i)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexing.py", line 1312, in _getitem_axis
+    return self._get_label(key, axis=axis)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexing.py", line 1260, in _get_label
+    return self.obj.xs(label, axis=axis)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\generic.py", line 4056, in xs
+    loc = index.get_loc(key)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexes\datetimes.py", line 738, in get_loc
+    raise KeyError(orig_key) from err
+KeyError: '2024-01-01'
+. Retrying
+2024-03-02 13:54:54 [INFO] Using prompt: <dataframe>
+dfs[0]:20x6
+Open,High,Low,Close,Adj Close,Volume
+42.70000076293945,42.779998779296875,42.13999938964844,9415266544,5327637911,34068200
+43.0,43.13999938964844,41.599998474121094,7701600559,5256028827,53669900
+42.619998931884766,43.150001525878906,42.43000030517578,1215247101,0859303754,28890300
+</dataframe>
+
+The user asked the following question:
+Q: What was the price on 2024-01-01?
+
+You generated this python code:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+price = dfs[0].loc['2024-01-01', 'Close']
+
+# Declare result var
+result = {
+    "type": "number",
+    "value": price
+}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "pandas\_libs\index.pyx", line 548, in pandas._libs.index.DatetimeEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 2263, in pandas._libs.hashtable.Int64HashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 2273, in pandas._libs.hashtable.Int64HashTable.get_item
+KeyError: 1704067200000000000
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexes\base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 516, in pandas._libs.index.DatetimeEngine.get_loc
+  File "pandas\_libs\index.pyx", line 550, in pandas._libs.index.DatetimeEngine.get_loc
+KeyError: Timestamp('2024-01-01 00:00:00')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexes\datetimes.py", line 736, in get_loc
+    return Index.get_loc(self, key, method, tolerance)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexes\base.py", line 3804, in get_loc
+    raise KeyError(key) from err
+KeyError: Timestamp('2024-01-01 00:00:00')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandasai\pipelines\smart_datalake_chat\code_execution.py", line 46, in execute
+    result = pipeline_context.query_exec_tracker.execute_func(
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandasai\helpers\query_exec_tracker.py", line 128, in execute_func
+    result = function(*args, **kwargs)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandasai\helpers\code_manager.py", line 207, in execute_code
+    exec(code_to_run, environment)
+  File "<string>", line 1, in <module>
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexing.py", line 1067, in __getitem__
+    return self._getitem_tuple(key)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexing.py", line 1247, in _getitem_tuple
+    return self._getitem_lowerdim(tup)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexing.py", line 967, in _getitem_lowerdim
+    section = self._getitem_axis(key, axis=i)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexing.py", line 1312, in _getitem_axis
+    return self._get_label(key, axis=axis)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexing.py", line 1260, in _get_label
+    return self.obj.xs(label, axis=axis)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\generic.py", line 4056, in xs
+    loc = index.get_loc(key)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexes\datetimes.py", line 738, in get_loc
+    raise KeyError(orig_key) from err
+KeyError: '2024-01-01'
+
+
+Fix the python code above and return the new python code:
+2024-03-02 13:54:56 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-03-02 13:54:56 [INFO] Saving charts to C:\Users\mram\OneDrive - Intel Corporation\Python\OpenAI\ChatFun\exports\charts\temp_chart.png
+2024-03-02 13:54:56 [INFO] 
+Code running:
+```
+price = dfs[0].loc['2024-01-01', 'Close']
+result = {'type': 'number', 'value': price}
+        ```
+2024-03-02 13:54:56 [WARNING] Failed to execute code with a correction framework [retry number: 2]
+2024-03-02 13:54:56 [ERROR] Failed with error: Traceback (most recent call last):
+  File "pandas\_libs\index.pyx", line 548, in pandas._libs.index.DatetimeEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 2263, in pandas._libs.hashtable.Int64HashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 2273, in pandas._libs.hashtable.Int64HashTable.get_item
+KeyError: 1704067200000000000
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexes\base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 516, in pandas._libs.index.DatetimeEngine.get_loc
+  File "pandas\_libs\index.pyx", line 550, in pandas._libs.index.DatetimeEngine.get_loc
+KeyError: Timestamp('2024-01-01 00:00:00')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexes\datetimes.py", line 736, in get_loc
+    return Index.get_loc(self, key, method, tolerance)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexes\base.py", line 3804, in get_loc
+    raise KeyError(key) from err
+KeyError: Timestamp('2024-01-01 00:00:00')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandasai\pipelines\smart_datalake_chat\code_execution.py", line 46, in execute
+    result = pipeline_context.query_exec_tracker.execute_func(
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandasai\helpers\query_exec_tracker.py", line 128, in execute_func
+    result = function(*args, **kwargs)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandasai\helpers\code_manager.py", line 207, in execute_code
+    exec(code_to_run, environment)
+  File "<string>", line 1, in <module>
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexing.py", line 1067, in __getitem__
+    return self._getitem_tuple(key)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexing.py", line 1247, in _getitem_tuple
+    return self._getitem_lowerdim(tup)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexing.py", line 967, in _getitem_lowerdim
+    section = self._getitem_axis(key, axis=i)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexing.py", line 1312, in _getitem_axis
+    return self._get_label(key, axis=axis)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexing.py", line 1260, in _get_label
+    return self.obj.xs(label, axis=axis)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\generic.py", line 4056, in xs
+    loc = index.get_loc(key)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexes\datetimes.py", line 738, in get_loc
+    raise KeyError(orig_key) from err
+KeyError: '2024-01-01'
+. Retrying
+2024-03-02 13:54:56 [INFO] Using prompt: <dataframe>
+dfs[0]:20x6
+Open,High,Low,Close,Adj Close,Volume
+42.70000076293945,42.779998779296875,42.13999938964844,9415266544,5327637911,34068200
+43.0,43.13999938964844,41.599998474121094,7701600559,5256028827,53669900
+42.619998931884766,43.150001525878906,42.43000030517578,1215247101,0859303754,28890300
+</dataframe>
+
+The user asked the following question:
+Q: What was the price on 2024-01-01?
+
+You generated this python code:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+price = dfs[0].loc['2024-01-01', 'Close']
+
+# Declare result var
+result = {
+    "type": "number",
+    "value": price
+}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "pandas\_libs\index.pyx", line 548, in pandas._libs.index.DatetimeEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 2263, in pandas._libs.hashtable.Int64HashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 2273, in pandas._libs.hashtable.Int64HashTable.get_item
+KeyError: 1704067200000000000
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexes\base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 516, in pandas._libs.index.DatetimeEngine.get_loc
+  File "pandas\_libs\index.pyx", line 550, in pandas._libs.index.DatetimeEngine.get_loc
+KeyError: Timestamp('2024-01-01 00:00:00')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexes\datetimes.py", line 736, in get_loc
+    return Index.get_loc(self, key, method, tolerance)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexes\base.py", line 3804, in get_loc
+    raise KeyError(key) from err
+KeyError: Timestamp('2024-01-01 00:00:00')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandasai\pipelines\smart_datalake_chat\code_execution.py", line 46, in execute
+    result = pipeline_context.query_exec_tracker.execute_func(
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandasai\helpers\query_exec_tracker.py", line 128, in execute_func
+    result = function(*args, **kwargs)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandasai\helpers\code_manager.py", line 207, in execute_code
+    exec(code_to_run, environment)
+  File "<string>", line 1, in <module>
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexing.py", line 1067, in __getitem__
+    return self._getitem_tuple(key)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexing.py", line 1247, in _getitem_tuple
+    return self._getitem_lowerdim(tup)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexing.py", line 967, in _getitem_lowerdim
+    section = self._getitem_axis(key, axis=i)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexing.py", line 1312, in _getitem_axis
+    return self._get_label(key, axis=axis)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexing.py", line 1260, in _get_label
+    return self.obj.xs(label, axis=axis)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\generic.py", line 4056, in xs
+    loc = index.get_loc(key)
+  File "C:\Users\mram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandas\core\indexes\datetimes.py", line 738, in get_loc
+    raise KeyError(orig_key) from err
+KeyError: '2024-01-01'
+
+
+Fix the python code above and return the new python code:
+2024-03-02 13:54:57 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-03-02 13:54:57 [INFO] Saving charts to C:\Users\mram\OneDrive - Intel Corporation\Python\OpenAI\ChatFun\exports\charts\temp_chart.png
+2024-03-02 13:54:57 [INFO] 
+Code running:
+```
+price = dfs[0].loc['2024-01-01', 'Close']
+result = {'type': 'number', 'value': price}
+        ```
+2024-03-02 13:54:57 [ERROR] Pipeline failed on step 4: '2024-01-01'
+2024-03-02 13:57:14 [INFO] Question: What was the price on 2024-02-02?
+2024-03-02 13:57:14 [INFO] Running PandasAI with openai LLM...
+2024-03-02 13:57:14 [INFO] Prompt ID: 74e75aac-ca11-4c39-978e-b99d23a7371e
+2024-03-02 13:57:14 [INFO] Executing Step 0: CacheLookup
+2024-03-02 13:57:14 [INFO] Executing Step 1: PromptGeneration
+2024-03-02 13:57:14 [INFO] Using prompt: <dataframe>
+dfs[0]:20x6
+Open,High,Low,Close,Adj Close,Volume
+42.619998931884766,43.150001525878906,42.43000030517578,42.77000045776367,42.64500045776367,28890300
+42.70000076293945,42.779998779296875,42.13999938964844,42.7400016784668,42.7400016784668,34068200
+43.0,43.13999938964844,41.599998474121094,42.599998474121094,42.475494384765625,53669900
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+```
+
+Q: What was the price on 2024-02-02?
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+
+Generate python code and return full updated code:
+2024-03-02 13:57:14 [INFO] Executing Step 2: CodeGenerator
+2024-03-02 13:57:16 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-03-02 13:57:16 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+date = "2024-02-02"
+price = None
+for df in dfs:
+    if date in df.index:
+        price = df.loc[date, 'Close']
+        break
+
+result = {"type": "number", "value": price}
+            ```
+            
+2024-03-02 13:57:16 [INFO] Executing Step 3: CachePopulation
+2024-03-02 13:57:16 [INFO] Executing Step 4: CodeExecution
+2024-03-02 13:57:16 [INFO] Saving charts to C:\Users\mram\OneDrive - Intel Corporation\Python\OpenAI\ChatFun\exports\charts\temp_chart.png
+2024-03-02 13:57:16 [INFO] 
+Code running:
+```
+date = '2024-02-02'
+price = None
+for df in dfs:
+    if date in df.index:
+        price = df.loc[date, 'Close']
+        break
+result = {'type': 'number', 'value': price}
+        ```
+2024-03-02 13:57:16 [INFO] Executing Step 5: ResultValidation
+2024-03-02 13:57:16 [INFO] Answer: {'type': 'number', 'value': 42.599998474121094}
+2024-03-02 13:57:16 [INFO] Executed in: 1.992943286895752s
+2024-03-02 13:57:16 [INFO] Executing Step 6: ResultParsing
+2024-03-02 13:57:35 [INFO] Question: What was the average price?
+2024-03-02 13:57:35 [INFO] Running PandasAI with openai LLM...
+2024-03-02 13:57:35 [INFO] Prompt ID: 3c4c9234-8a09-488a-9550-105c321d33b8
+2024-03-02 13:57:35 [INFO] Executing Step 0: CacheLookup
+2024-03-02 13:57:35 [INFO] Executing Step 1: PromptGeneration
+2024-03-02 13:57:35 [INFO] Using prompt: <dataframe>
+dfs[0]:20x6
+Open,High,Low,Close,Adj Close,Volume
+42.619998931884766,43.150001525878906,42.43000030517578,42.77000045776367,42.64500045776367,28890300
+43.0,43.13999938964844,41.599998474121094,42.599998474121094,42.475494384765625,53669900
+42.70000076293945,42.779998779296875,42.13999938964844,42.7400016784668,42.7400016784668,34068200
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+```
+
+Q: What was the average price?
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+
+Generate python code and return full updated code:
+2024-03-02 13:57:35 [INFO] Executing Step 2: CodeGenerator
+2024-03-02 13:57:36 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-03-02 13:57:36 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+average_price = sum([df['Close'].mean() for df in dfs]) / len(dfs)
+
+# Declare result var
+result = {"type": "number", "value": average_price}
+            ```
+            
+2024-03-02 13:57:36 [INFO] Executing Step 3: CachePopulation
+2024-03-02 13:57:36 [INFO] Executing Step 4: CodeExecution
+2024-03-02 13:57:36 [INFO] Saving charts to C:\Users\mram\OneDrive - Intel Corporation\Python\OpenAI\ChatFun\exports\charts\temp_chart.png
+2024-03-02 13:57:36 [INFO] 
+Code running:
+```
+average_price = sum([df['Close'].mean() for df in dfs]) / len(dfs)
+result = {'type': 'number', 'value': average_price}
+        ```
+2024-03-02 13:57:36 [INFO] Executing Step 5: ResultValidation
+2024-03-02 13:57:36 [INFO] Answer: {'type': 'number', 'value': 43.20900001525879}
+2024-03-02 13:57:36 [INFO] Executed in: 1.3809468746185303s
+2024-03-02 13:57:36 [INFO] Executing Step 6: ResultParsing
