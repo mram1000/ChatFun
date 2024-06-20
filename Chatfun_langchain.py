@@ -29,7 +29,7 @@ with st.form('my_form'):
    # if submitted and open_api_key.startswith('sk-'):
       generate_response(text) 
 
-st.caption("Copyright @ Madhu Ram 2023")  
+st.caption("Copyright @ Madhu Ram 2024")  
 
 # set default model in session state
 # if "openai_model" not in st.session_state:
